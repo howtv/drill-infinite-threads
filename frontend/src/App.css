@@ -1,0 +1,269 @@
+/* src/App.css */
+
+/* アプリ全体のコンテナ */
+.app-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* スレッド（投稿）のスタイル */
+.thread {
+  border-bottom: 1px solid #e1e8ed;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.thread:last-child {
+  border-bottom: none;
+}
+
+.thread-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.thread-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.thread-header .user {
+  font-weight: bold;
+  color: #14171a;
+  font-size: 16px;
+}
+
+.thread-header .timestamp {
+  font-size: 12px;
+  color: #657786;
+}
+
+.thread-content p {
+  margin: 10px 0 0 0;
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+/* 返信ボタン */
+.reply-button {
+  background-color: transparent;
+  border: none;
+  color: #1da1f2;
+  cursor: pointer;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 9999px;
+  transition: background-color 0.2s, color 0.2s;
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+.reply-button:hover {
+  background-color: rgba(29, 161, 242, 0.1);
+  color: #1a91da;
+}
+
+/* 返信フォームのスタイル */
+.reply-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  padding: 10px 0;
+}
+
+.reply-form .form-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.reply-form .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #1da1f2;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.reply-form .form-fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.reply-form input,
+.reply-form textarea {
+  width: 100%;
+  padding: 10px 16px;
+  margin-bottom: 10px;
+  border: 1px solid #e1e8ed;
+  border-radius: 9999px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.reply-form input:focus,
+.reply-form textarea:focus {
+  border-color: #1da1f2;
+}
+
+.reply-form textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+.reply-form .submit-button {
+  padding: 8px 16px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+  align-self: flex-end;
+}
+
+.reply-form .submit-button:hover {
+  background-color: #0d95e8;
+}
+
+.reply-form .cancel-button {
+  background-color: transparent;
+  color: #657786;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.reply-form .cancel-button:hover {
+  background-color: rgba(101, 119, 134, 0.1);
+  color: #495057;
+}
+
+.reply-form .error-message {
+  color: #e0245e;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* 新しいスレッド作成フォームのコンテナ */
+.new-thread-form {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px; /* パディングを調整 */
+  border-bottom: 1px solid #e1e8ed;
+  background-color: #ffffff;
+  margin-bottom: 20px; /* 下部に余白を追加 */
+}
+
+.new-thread-form .form-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.new-thread-form .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #1da1f2;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.new-thread-form .form-fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-thread-form input,
+.new-thread-form textarea {
+  width: 100%;
+  padding: 10px 16px;
+  margin-bottom: 10px;
+  border: 1px solid #e1e8ed;
+  border-radius: 9999px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.new-thread-form input:focus,
+.new-thread-form textarea:focus {
+  border-color: #1da1f2;
+}
+
+.new-thread-form textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+.new-thread-form .submit-button {
+  padding: 8px 16px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+  align-self: flex-end;
+}
+
+.new-thread-form .submit-button:hover {
+  background-color: #0d95e8;
+}
+
+.new-thread-form .cancel-button {
+  background-color: transparent;
+  color: #657786;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.new-thread-form .cancel-button:hover {
+  background-color: rgba(101, 119, 134, 0.1);
+  color: #495057;
+}
+
+.new-thread-form .error-message {
+  color: #e0245e;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* 返信のリスト */
+.replies {
+  margin-left: 60px; /* アバター分のスペースを確保 */
+  margin-top: 10px;
+  padding-left: 0;
+}
+
+/* 各返信のスタイル */
+.replies .thread {
+  border-bottom: none;
+  padding: 10px 0;
+}
+
+.replies .thread:last-child {
+  border-bottom: none;
+}
